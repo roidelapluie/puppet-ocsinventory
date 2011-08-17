@@ -5,6 +5,10 @@ class ocsinventory::config {
 			mode => 0666,
 			content => template('ocsinventory/dbconfig.inc.php.erb');
 
+		'/etc/httpd/conf.d/ocsinventory-server.conf':
+			ensure => present,
+			content => template('ocsinventory/ocsinventory-server.conf.erb');
+
 		'/usr/share/ocsinventory-reports/ocsreports/install.php':
 			ensure => absent;
 	}
