@@ -1,4 +1,5 @@
 class ocsinventory::core {
+/*
 	file {
 		'setup.sh':
 			ensure => present,
@@ -13,4 +14,5 @@ class ocsinventory::core {
 			provider => shell,
 			cwd => '/tmp/OCSNG_UNIX_SERVER-2.0';
 	}
+*/
 }
