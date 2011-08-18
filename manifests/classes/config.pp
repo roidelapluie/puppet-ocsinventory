@@ -7,9 +7,10 @@ class ocsinventory::config {
 
 		'/etc/httpd/conf.d/ocsinventory-server.conf':
 			ensure => present,
+			notify => Service["apache"],
 			content => template('ocsinventory/ocsinventory-server.conf.erb');
 
 		'/usr/share/ocsinventory-reports/ocsreports/install.php':
-			ensure => absent;
+			ensure => present;
 	}
 }
