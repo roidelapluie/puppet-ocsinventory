@@ -1,0 +1,4 @@
+To get this working, you still need to manually run the install.php (available at http://$yourhost/ocsreports/install.php .
+You can log in with the mysql credentials provided by the ocsinventory module (user='ocs' pass='xoh1Dae4').
+After that you can log in to http://$yourhost/ocsreports, with credentials: user='admin' pass='admin' .
+Then all you have to do is run the clients against this server and you're done.
