@@ -9,6 +9,21 @@ class ocsinventory (
 	$server = 'no',
 	$webserver = 'httpd'
 ) {
-	class{'ocsinventory::iptables':} -> class{'ocsinventory::repo':} -> class{'ocsinventory::packages':} -> class{'ocsinventory::dbconf':} -> class{'ocsinventory::core':} -> class{'ocsinventory::config':}
-	Exec{path=>'/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin'}
+	class {
+		'ocsinventory::iptables':
+			before => Class['ocsinventory::repo'];
+		'ocsinventory::repo':
+			before => Class['ocsinventory::packages'];
+		'ocsinventory::packages':
+			before => Class['ocsinventory::dbconf'];
+		'ocsinventory::dbconf':
+			before => Class['ocsinventory::core'];
+		'ocsinventory::core':
+			before => Class['ocsinventory::config'];
+		'ocsinventory::config':;
+	}
+
+	Exec {
+		path=> '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin'
+	}
 }
