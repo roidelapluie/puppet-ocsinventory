@@ -13,7 +13,20 @@ class ocsinventory::packages {
 	}
 
 	class source {
-		$pkgs=['php-mysql', 'php-gd', 'perl-XML-Simple', 'perl-Compress-Zlib', 'perl-DBI', 'perl-DBD-MySQL', 'perl-Net-IP', 'perl-XML-Entities', 'perl-Apache-DBI', 'perl-Apache2-SOAP', 'perl-SOAP-Lite', 'mod_perl']
+		$pkgs=[
+			'php-mysql',
+			'php-gd',
+			'perl-XML-Simple',
+			'perl-Compress-Zlib',
+			'perl-DBI',
+			'perl-DBD-MySQL',
+			'perl-Net-IP',
+			'perl-XML-Entities',
+			'perl-Apache-DBI',
+			'perl-Apache2-SOAP',
+			'perl-SOAP-Lite',
+			'mod_perl'
+		]
 
 		package {
 			$pkgs:
