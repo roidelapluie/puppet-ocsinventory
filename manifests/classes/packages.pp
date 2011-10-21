@@ -1,9 +1,9 @@
 class ocsinventory::packages {
 	@package {
 		'ocsinventory':
-			ensure => present;
+			ensure => latest;
 		'ocsinventory-agent':
-			ensure => present;
+			ensure => latest;
 	}
 
 	realize(Package['ocsinventory-agent'])
