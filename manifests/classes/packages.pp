@@ -16,6 +16,7 @@ class ocsinventory::packages {
 		$pkgs=[
 			'php-mysql',
 			'php-gd',
+			'php-ldap',
 			'perl-XML-Simple',
 			'perl-Compress-Zlib',
 			'perl-DBI',
