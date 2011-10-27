@@ -17,10 +17,10 @@ class ocsinventory (
 		'ocsinventory::packages':
 			before => Class['ocsinventory::dbconf'];
 		'ocsinventory::dbconf':
-			before => Class['ocsinventory::core'];
-		'ocsinventory::core':
 			before => Class['ocsinventory::config'];
-		'ocsinventory::config':;
+		'ocsinventory::config':
+			before => Class['ocsinventory::core'];
+		'ocsinventory::core':;
 	}
 
 	Exec {

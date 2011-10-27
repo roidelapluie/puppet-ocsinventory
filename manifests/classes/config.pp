@@ -9,8 +9,5 @@ class ocsinventory::config {
 			ensure => present,
 			notify => Service["$ocsinventory::webserver"],
 			content => template('ocsinventory/ocsinventory-server.conf.erb');
-
-		'/usr/share/ocsinventory-reports/ocsreports/install.php':
-			ensure => present;
 	}
 }

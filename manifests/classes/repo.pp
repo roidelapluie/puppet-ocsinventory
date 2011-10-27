@@ -1,3 +1,3 @@
 class ocsinventory::repo {
-	realize(File['epel-gpg-key'], Yumrepo['epel'])
+	realize(File['epel-gpg-key'], Yumrepo['epel'], Yumrepo['inuits-private'])
 }
