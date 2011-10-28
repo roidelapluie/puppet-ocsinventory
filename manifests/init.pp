@@ -1,8 +1,8 @@
 import 'classes/*'
 
 class ocsinventory (
+	$dbpass,
 	$dbuser = 'ocs',
-	$dbpass = 'xoh1Dae4',
 	$dbname = 'ocs',
 	$dbhost = 'localhost',
 	$dbport = '3306',
